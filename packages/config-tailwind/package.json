@@ -1,0 +1,16 @@
+{
+  "name": "@mss/config-tailwind",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "tailwind.config.ts",
+  "files": [
+    "tailwind.config.ts"
+  ],
+  "devDependencies": {
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3.4.0"
+  }
+}
