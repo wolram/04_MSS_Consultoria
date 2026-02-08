@@ -48,6 +48,9 @@ Consultoria de automação e IA focada em pequenas e médias empresas brasileira
 
 ## Contato
 
-**Marlow Santos Silva**
-- Tech Lead RPA @ Banco Omni
+- 
 - MSS Consultoria
+X: 
+Linkedin
+Whatsapp
+
