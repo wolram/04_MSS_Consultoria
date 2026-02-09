@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, CheckCircle2, Circle } from "lucide-react";
+import { ArrowLeftIcon, CheckCircleIcon, CircleStackIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 
 const projectData: Record<string, { name: string; status: string; description: string; budget: string; start: string; end: string; progress: number }> = {
@@ -41,7 +41,7 @@ export default function ProjetoDetailPage() {
   return (
     <div className="space-y-6">
       <Link href="/projetos" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-        <ArrowLeft className="w-4 h-4" /> Voltar para Projetos
+        <ArrowLeftIcon className="w-4 h-4" /> Voltar para Projetos
       </Link>
 
       <div className="flex items-start justify-between">
@@ -104,9 +104,9 @@ export default function ProjetoDetailPage() {
           {milestones.map((m, i) => (
             <div key={i} className="flex items-center gap-3 p-4 rounded-xl border border-border bg-card">
               {m.done ? (
-                <CheckCircle2 className="w-5 h-5 text-green-600" />
+                <CheckCircleIcon className="w-5 h-5 text-green-600" />
               ) : (
-                <Circle className="w-5 h-5 text-muted-foreground" />
+                <CircleStackIcon className="w-5 h-5 text-muted-foreground" />
               )}
               <span className={cn("text-sm", m.done ? "text-foreground" : "text-muted-foreground")}>
                 {m.name}

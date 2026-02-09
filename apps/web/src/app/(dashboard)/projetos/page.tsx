@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Plus } from "lucide-react";
+import { PlusIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 import { DataTable } from "@/components/dashboard/data-table";
 
@@ -93,7 +93,7 @@ export default function ProjetosPage() {
           ))}
         </div>
         <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
-          <Plus className="w-4 h-4" />
+          <PlusIcon className="w-4 h-4" />
           Novo Projeto
         </button>
       </div>

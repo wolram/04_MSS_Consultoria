@@ -1,6 +1,6 @@
 "use client";
 
-import { FolderKanban, DollarSign, MessageSquare, Clock, Plus, Send, Receipt } from "lucide-react";
+import { FolderOpenIcon, CurrencyDollarIcon, ChatBubbleLeftRightIcon, ClockIcon, PlusIcon, PaperAirplaneIcon, ReceiptPercentIcon } from "@heroicons/react/24/outline";
 import { StatCard } from "@/components/dashboard/stat-card";
 import Link from "next/link";
 
@@ -20,26 +20,26 @@ export default function PainelPage() {
         <StatCard
           title="Projetos Ativos"
           value="5"
-          icon={FolderKanban}
+          icon={FolderOpenIcon}
           trend={{ value: "+12%", direction: "up" }}
         />
         <StatCard
           title="Receita Mensal"
           value="R$ 125.000"
-          icon={DollarSign}
+          icon={CurrencyDollarIcon}
           trend={{ value: "+8%", direction: "up" }}
         />
         <StatCard
           title="Mensagens"
           value="12"
           description="3 novas"
-          icon={MessageSquare}
+          icon={ChatBubbleLeftRightIcon}
           trend={{ value: "3 novas", direction: "neutral" }}
         />
         <StatCard
           title="Próxima Entrega"
           value="5 dias"
-          icon={Clock}
+          icon={ClockIcon}
           description="Projeto Banco Digital"
         />
       </div>
@@ -74,7 +74,7 @@ export default function PainelPage() {
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-accent transition-colors"
             >
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Plus className="w-4 h-4 text-primary" />
+                <PlusIcon className="w-4 h-4 text-primary" />
               </div>
               <span className="text-sm font-medium text-foreground">Novo Projeto</span>
             </Link>
@@ -83,7 +83,7 @@ export default function PainelPage() {
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-accent transition-colors"
             >
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Send className="w-4 h-4 text-primary" />
+                <PaperAirplaneIcon className="w-4 h-4 text-primary" />
               </div>
               <span className="text-sm font-medium text-foreground">Enviar Mensagem</span>
             </Link>
@@ -92,7 +92,7 @@ export default function PainelPage() {
               className="flex items-center gap-3 p-3 rounded-xl hover:bg-accent transition-colors"
             >
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Receipt className="w-4 h-4 text-primary" />
+                <ReceiptPercentIcon className="w-4 h-4 text-primary" />
               </div>
               <span className="text-sm font-medium text-foreground">Ver Faturas</span>
             </Link>

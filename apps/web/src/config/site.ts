@@ -15,10 +15,11 @@ export const siteConfig = {
     "estratégia digital",
   ],
   links: {
-    linkedin: "https://linkedin.com/company/mss-consultoria",
+    linkedin: "https://www.linkedin.com/company/109396023",
     github: "https://github.com/mss-consultoria",
     email: "contato@mssconsultoria.com.br",
-    phone: "+55 11 99999-9999",
+    phone: "+55 11 98395-3778",
+    whatsapp: "+5511983953778",
   },
   address: {
     street: "Av. Paulista, 1000 - Sala 1501",

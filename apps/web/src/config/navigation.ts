@@ -78,29 +78,29 @@ export const footerLinks = {
 } as const;
 
 
-import type { LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
 import {
-  LayoutDashboard,
-  FolderOpen,
-  FileText,
-  Receipt,
-  MessageSquare,
-  BarChart3,
-  Settings,
-} from "lucide-react";
+  Squares2X2Icon,
+  FolderOpenIcon,
+  DocumentTextIcon,
+  ReceiptPercentIcon,
+  ChatBubbleLeftRightIcon,
+  ChartBarIcon,
+  Cog6ToothIcon,
+} from "@heroicons/react/24/outline";
 
 export interface DashboardNavItem {
   label: string;
   href: string;
-  icon: LucideIcon;
+  icon: ComponentType<{ className?: string }>;
 }
 
 export const dashboardNavItems: DashboardNavItem[] = [
-  { label: "Painel", href: "/painel", icon: LayoutDashboard },
-  { label: "Projetos", href: "/projetos", icon: FolderOpen },
-  { label: "Documentos", href: "/documentos", icon: FileText },
-  { label: "Faturas", href: "/faturas", icon: Receipt },
-  { label: "Mensagens", href: "/mensagens", icon: MessageSquare },
-  { label: "Analíticos", href: "/analiticos", icon: BarChart3 },
-  { label: "Configurações", href: "/configuracoes", icon: Settings },
+  { label: "Painel", href: "/painel", icon: Squares2X2Icon },
+  { label: "Projetos", href: "/projetos", icon: FolderOpenIcon },
+  { label: "Documentos", href: "/documentos", icon: DocumentTextIcon },
+  { label: "Faturas", href: "/faturas", icon: ReceiptPercentIcon },
+  { label: "Mensagens", href: "/mensagens", icon: ChatBubbleLeftRightIcon },
+  { label: "Analíticos", href: "/analiticos", icon: ChartBarIcon },
+  { label: "Configurações", href: "/configuracoes", icon: Cog6ToothIcon },
 ];

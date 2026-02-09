@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, CheckCircle2, Calendar, Clock } from "lucide-react";
+import { ChevronLeftIcon, ChevronRightIcon, CheckCircleIcon, CalendarIcon, ClockIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 
@@ -58,7 +58,7 @@ export default function AgendamentoPage() {
     return (
       <div className="pt-16">
         <div className="max-w-lg mx-auto px-4 py-20 text-center">
-          <CheckCircle2 className="w-16 h-16 text-green-600 mx-auto" />
+          <CheckCircleIcon className="w-16 h-16 text-green-600 mx-auto" />
           <h1 className="mt-6 font-heading text-3xl font-bold text-foreground">Agendamento Confirmado!</h1>
           <p className="mt-4 text-muted-foreground">
             Sua consultoria esta agendada para <strong>{selectedDate} de {monthNames[currentMonth]} de {currentYear}</strong> as <strong>{selectedTime}</strong>.
@@ -94,9 +94,9 @@ export default function AgendamentoPage() {
         {step === 0 && (
           <div className="max-w-md mx-auto rounded-2xl border border-border bg-card p-6">
             <div className="flex items-center justify-between mb-4">
-              <button onClick={prevMonth} className="p-2 hover:bg-accent rounded-lg transition-colors"><ChevronLeft className="w-4 h-4" /></button>
+              <button onClick={prevMonth} className="p-2 hover:bg-accent rounded-lg transition-colors"><ChevronLeftIcon className="w-4 h-4" /></button>
               <h3 className="font-heading font-semibold text-foreground">{monthNames[currentMonth]} {currentYear}</h3>
-              <button onClick={nextMonth} className="p-2 hover:bg-accent rounded-lg transition-colors"><ChevronRight className="w-4 h-4" /></button>
+              <button onClick={nextMonth} className="p-2 hover:bg-accent rounded-lg transition-colors"><ChevronRightIcon className="w-4 h-4" /></button>
             </div>
             <div className="grid grid-cols-7 gap-1 text-center mb-2">
               {["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"].map((d) => (
@@ -130,7 +130,7 @@ export default function AgendamentoPage() {
         {step === 1 && (
           <div className="max-w-md mx-auto rounded-2xl border border-border bg-card p-6">
             <p className="text-sm text-muted-foreground mb-4 flex items-center gap-2">
-              <Calendar className="w-4 h-4" /> {selectedDate} de {monthNames[currentMonth]} de {currentYear}
+              <CalendarIcon className="w-4 h-4" /> {selectedDate} de {monthNames[currentMonth]} de {currentYear}
             </p>
             <h3 className="font-heading font-semibold text-foreground mb-4">Escolha um horario</h3>
             <div className="grid grid-cols-2 gap-3">
@@ -160,8 +160,8 @@ export default function AgendamentoPage() {
         {step === 2 && (
           <div className="max-w-md mx-auto rounded-2xl border border-border bg-card p-6">
             <p className="text-sm text-muted-foreground mb-1 flex items-center gap-2">
-              <Calendar className="w-4 h-4" /> {selectedDate} de {monthNames[currentMonth]}
-              <Clock className="w-4 h-4 ml-2" /> {selectedTime}
+              <CalendarIcon className="w-4 h-4" /> {selectedDate} de {monthNames[currentMonth]}
+              <ClockIcon className="w-4 h-4 ml-2" /> {selectedTime}
             </p>
             <h3 className="font-heading font-semibold text-foreground mt-3 mb-4">Seus dados</h3>
             <form onSubmit={handleSubmit} className="space-y-4">

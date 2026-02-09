@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FileText, FileSpreadsheet, File, Upload, Grid, List, Download } from "lucide-react";
+import { DocumentTextIcon, DocumentIcon, ArrowUpTrayIcon, Squares2X2Icon, ListBulletIcon, ArrowDownTrayIcon } from "@heroicons/react/24/outline";
+import { TableCellsIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 
 const documents = [
@@ -15,10 +16,10 @@ const documents = [
   { name: "Orçamento Q1 2026.xlsx", type: "xlsx", size: "420 KB", date: "05/01/2026" },
 ];
 
-const typeIcons: Record<string, typeof FileText> = {
-  pdf: FileText,
-  xlsx: FileSpreadsheet,
-  docx: File,
+const typeIcons: Record<string, typeof DocumentTextIcon> = {
+  pdf: DocumentTextIcon,
+  xlsx: TableCellsIcon,
+  docx: DocumentIcon,
 };
 
 const typeColors: Record<string, string> = {
@@ -38,17 +39,17 @@ export default function DocumentosPage() {
             onClick={() => setView("grid")}
             className={cn("p-2 rounded-lg transition-colors", view === "grid" ? "bg-accent text-foreground" : "text-muted-foreground hover:bg-accent")}
           >
-            <Grid className="w-4 h-4" />
+            <Squares2X2Icon className="w-4 h-4" />
           </button>
           <button
             onClick={() => setView("list")}
             className={cn("p-2 rounded-lg transition-colors", view === "list" ? "bg-accent text-foreground" : "text-muted-foreground hover:bg-accent")}
           >
-            <List className="w-4 h-4" />
+            <ListBulletIcon className="w-4 h-4" />
           </button>
         </div>
         <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
-          <Upload className="w-4 h-4" />
+          <ArrowUpTrayIcon className="w-4 h-4" />
           Upload
         </button>
       </div>
@@ -65,7 +66,7 @@ export default function DocumentosPage() {
                 <p className="mt-3 text-sm font-medium text-foreground truncate">{doc.name}</p>
                 <p className="text-xs text-muted-foreground mt-1">{doc.size} &middot; {doc.date}</p>
                 <button className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity inline-flex items-center gap-1 text-xs text-primary hover:underline">
-                  <Download className="w-3 h-3" /> Baixar
+                  <ArrowDownTrayIcon className="w-3 h-3" /> Baixar
                 </button>
               </div>
             );

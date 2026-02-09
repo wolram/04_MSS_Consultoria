@@ -1,11 +1,12 @@
-import { type LucideIcon, TrendingUp, TrendingDown } from "lucide-react";
+import { type ComponentType } from "react";
+import { ArrowTrendingUpIcon, ArrowTrendingDownIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 
 interface StatCardProps {
   title: string;
   value: string;
   description?: string;
-  icon: LucideIcon;
+  icon: ComponentType<{ className?: string }>;
   trend?: { value: string; direction: "up" | "down" | "neutral" };
 }
 
@@ -25,8 +26,8 @@ export function StatCard({ title, value, description, icon: Icon, trend }: StatC
               trend.direction === "neutral" && "bg-muted text-muted-foreground"
             )}
           >
-            {trend.direction === "up" && <TrendingUp className="w-3 h-3" />}
-            {trend.direction === "down" && <TrendingDown className="w-3 h-3" />}
+            {trend.direction === "up" && <ArrowTrendingUpIcon className="w-3 h-3" />}
+            {trend.direction === "down" && <ArrowTrendingDownIcon className="w-3 h-3" />}
             {trend.value}
           </span>
         )}

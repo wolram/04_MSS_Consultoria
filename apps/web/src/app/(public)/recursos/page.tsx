@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Download, FileText, BarChart3, BookOpen } from "lucide-react";
+import { ArrowDownTrayIcon, DocumentTextIcon, ChartBarIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,12 +8,12 @@ export const metadata: Metadata = {
 };
 
 const resources = [
-  { title: "Guia: Transformacao Digital 2026", description: "E-book completo com roadmap e melhores praticas", type: "E-book", icon: BookOpen },
-  { title: "Template: Business Case para IA", description: "Planilha pronta para justificar investimentos em IA", type: "Template", icon: FileText },
-  { title: "Whitepaper: ROI da Automacao", description: "Estudo detalhado com dados de 50+ empresas brasileiras", type: "Whitepaper", icon: BarChart3 },
-  { title: "Checklist: Migracao para Cloud", description: "Lista completa de verificacao para migracao segura", type: "Checklist", icon: FileText },
-  { title: "Infografico: LGPD e IA", description: "Resumo visual das obrigacoes de compliance", type: "Infografico", icon: BarChart3 },
-  { title: "Guia: Data Governance", description: "Framework pratico para governanca de dados", type: "E-book", icon: BookOpen },
+  { title: "Guia: Transformacao Digital 2026", description: "E-book completo com roadmap e melhores praticas", type: "E-book", icon: BookOpenIcon },
+  { title: "Template: Business Case para IA", description: "Planilha pronta para justificar investimentos em IA", type: "Template", icon: DocumentTextIcon },
+  { title: "Whitepaper: ROI da Automacao", description: "Estudo detalhado com dados de 50+ empresas brasileiras", type: "Whitepaper", icon: ChartBarIcon },
+  { title: "Checklist: Migracao para Cloud", description: "Lista completa de verificacao para migracao segura", type: "Checklist", icon: DocumentTextIcon },
+  { title: "Infografico: LGPD e IA", description: "Resumo visual das obrigacoes de compliance", type: "Infografico", icon: ChartBarIcon },
+  { title: "Guia: Data Governance", description: "Framework pratico para governanca de dados", type: "E-book", icon: BookOpenIcon },
 ];
 
 export default function RecursosPage() {
@@ -37,7 +37,7 @@ export default function RecursosPage() {
               <h3 className="mt-3 font-heading text-lg font-semibold text-foreground">{resource.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{resource.description}</p>
               <button className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline">
-                <Download className="w-4 h-4" /> Baixar gratuitamente
+                <ArrowDownTrayIcon className="w-4 h-4" /> Baixar gratuitamente
               </button>
             </div>
           ))}

@@ -1,23 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lightbulb, TrendingUp, Users } from "lucide-react";
+import { LightBulbIcon, ArrowTrendingUpIcon, UsersIcon } from "@heroicons/react/24/outline";
 
 const values = [
   {
-    icon: Lightbulb,
+    icon: LightBulbIcon,
     title: "Inovação",
     description:
       "Utilizamos as tecnologias mais avançadas para criar soluções que transformam negócios.",
   },
   {
-    icon: TrendingUp,
+    icon: ArrowTrendingUpIcon,
     title: "Resultados",
     description:
       "Focamos em métricas e ROI mensurável para garantir o sucesso de cada projeto.",
   },
   {
-    icon: Users,
+    icon: UsersIcon,
     title: "Parceria",
     description:
       "Trabalhamos lado a lado com nossos clientes em cada etapa da jornada digital.",

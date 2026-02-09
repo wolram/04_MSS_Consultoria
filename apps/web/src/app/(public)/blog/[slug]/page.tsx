@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Clock, Calendar } from "lucide-react";
+import { ArrowLeftIcon, ClockIcon, CalendarIcon } from "@heroicons/react/24/outline";
 
 const post = {
   title: "Como a IA Generativa esta Transformando Empresas em 2026",
@@ -49,7 +49,7 @@ export default function BlogPostPage() {
     <div className="pt-16">
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
-          <ArrowLeft className="w-4 h-4" /> Voltar para o Blog
+          <ArrowLeftIcon className="w-4 h-4" /> Voltar para o Blog
         </Link>
 
         <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
@@ -62,8 +62,8 @@ export default function BlogPostPage() {
 
         <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
           <span>Por {post.author}</span>
-          <span className="flex items-center gap-1"><Calendar className="w-3.5 h-3.5" /> {post.date}</span>
-          <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" /> {post.readTime}</span>
+          <span className="flex items-center gap-1"><CalendarIcon className="w-3.5 h-3.5" /> {post.date}</span>
+          <span className="flex items-center gap-1"><ClockIcon className="w-3.5 h-3.5" /> {post.readTime}</span>
         </div>
 
         <div className="mt-8 h-64 rounded-2xl bg-muted border border-border flex items-center justify-center">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, CheckCircle } from "lucide-react";
+import { ArrowLeftIcon, CheckCircleIcon } from "@heroicons/react/24/outline";
 import type { Metadata } from "next";
 
 const services: Record<string, { title: string; description: string; features: string[]; benefits: string[] }> = {
@@ -59,7 +59,7 @@ export default async function ServicoDetailPage({ params }: { params: Promise<{ 
     <div className="pt-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <Link href="/servicos" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8">
-          <ArrowLeft className="w-4 h-4" /> Voltar para Servicos
+          <ArrowLeftIcon className="w-4 h-4" /> Voltar para Servicos
         </Link>
 
         <h1 className="font-heading text-4xl font-bold text-foreground">{service.title}</h1>
@@ -71,7 +71,7 @@ export default async function ServicoDetailPage({ params }: { params: Promise<{ 
             <ul className="space-y-3">
               {service.features.map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">{feature}</span>
                 </li>
               ))}
@@ -82,7 +82,7 @@ export default async function ServicoDetailPage({ params }: { params: Promise<{ 
             <ul className="space-y-3">
               {service.benefits.map((benefit) => (
                 <li key={benefit} className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <CheckCircleIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                   <span className="text-muted-foreground">{benefit}</span>
                 </li>
               ))}

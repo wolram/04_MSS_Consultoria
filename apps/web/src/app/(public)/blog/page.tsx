@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -94,7 +94,7 @@ export default function BlogPage() {
                 <div className="mt-4 flex items-center justify-between">
                   <span className="text-xs text-muted-foreground">{post.date}</span>
                   <span className="inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    Ler mais <ArrowRight className="w-3.5 h-3.5" />
+                    Ler mais <ArrowRightIcon className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Calculator } from "lucide-react";
+import { ArrowRightIcon, CalculatorIcon } from "@heroicons/react/24/outline";
 
 const stats = [
   { label: "Projetos", value: "150+" },
@@ -14,11 +14,23 @@ const stats = [
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background pattern */}
+      {/* Background image with overlay */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/50 to-background" />
+        {/* High-res background image - Earth from space with tech overlay */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')`,
+          }}
+        />
+        {/* Dark overlay for better contrast and readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
+        {/* Animated gradient orbs for dynamic effect */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Subtle dot pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `radial-gradient(circle at 1px 1px, currentColor 1px, transparent 0)`,
             backgroundSize: "40px 40px",
@@ -70,13 +82,13 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
             >
               Agendar Consultoria
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRightIcon className="w-4 h-4" />
             </Link>
             <Link
               href="/calculadora-roi"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium hover:bg-accent transition-colors"
             >
-              <Calculator className="w-4 h-4" />
+              <CalculatorIcon className="w-4 h-4" />
               Calcular ROI
             </Link>
           </motion.div>

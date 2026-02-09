@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { toast } from "sonner";
 
 export function Newsletter() {
@@ -42,7 +42,7 @@ export function Newsletter() {
           disabled={loading}
           className="px-5 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 inline-flex items-center gap-2"
         >
-          <Send className="w-4 h-4" />
+          <PaperAirplaneIcon className="w-4 h-4" />
           {loading ? "Enviando..." : "Inscrever"}
         </button>
       </form>

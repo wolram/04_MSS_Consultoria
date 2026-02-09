@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Phone, Mail, MapPin } from "lucide-react";
+import { PaperAirplaneIcon, PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { toast } from "sonner";
 import { siteConfig } from "@/config/site";
 
@@ -110,7 +110,7 @@ export function ContactSection() {
                 disabled={loading}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors disabled:opacity-50"
               >
-                <Send className="w-4 h-4" />
+                <PaperAirplaneIcon className="w-4 h-4" />
                 {loading ? "Enviando..." : "Enviar Mensagem"}
               </button>
             </form>
@@ -127,7 +127,7 @@ export function ContactSection() {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-primary" />
+                  <PhoneIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">Telefone</h3>
@@ -136,7 +136,7 @@ export function ContactSection() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary" />
+                  <EnvelopeIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">Email</h3>
@@ -145,7 +145,7 @@ export function ContactSection() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPinIcon className="w-5 h-5 text-primary" />
                 </div>
                 <div>
                   <h3 className="font-medium text-foreground">Endereço</h3>

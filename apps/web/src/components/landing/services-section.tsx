@@ -2,41 +2,41 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Brain, BarChart3, Cloud, Cog, Target, Shield, ArrowRight } from "lucide-react";
+import { CpuChipIcon, ChartBarIcon, CloudIcon, Cog6ToothIcon, ArrowRightIcon, ShieldCheckIcon, CircleStackIcon } from "@heroicons/react/24/outline";
 
 const services = [
   {
-    icon: Brain,
+    icon: CpuChipIcon,
     title: "Inteligência Artificial",
     description: "Implementação de modelos de IA, machine learning e automação inteligente",
     slug: "inteligencia-artificial",
   },
   {
-    icon: BarChart3,
+    icon: ChartBarIcon,
     title: "Análise de Dados",
     description: "Business intelligence, dashboards e insights acionáveis para tomada de decisão",
     slug: "analise-de-dados",
   },
   {
-    icon: Cloud,
+    icon: CloudIcon,
     title: "Transformação em Nuvem",
     description: "Migração, arquitetura cloud-native e otimização de infraestrutura",
     slug: "transformacao-em-nuvem",
   },
   {
-    icon: Cog,
+    icon: Cog6ToothIcon,
     title: "Automação de Processos",
     description: "RPA, workflows automatizados e integração de sistemas",
     slug: "automacao-de-processos",
   },
   {
-    icon: Target,
+    icon: CircleStackIcon,
     title: "Estratégia Digital",
     description: "Roadmap de transformação, governança de dados e change management",
     slug: "estrategia-digital",
   },
   {
-    icon: Shield,
+    icon: ShieldCheckIcon,
     title: "Segurança & Compliance",
     description: "Proteção de dados, LGPD, auditoria e conformidade regulatória",
     slug: "seguranca-compliance",
@@ -85,7 +85,7 @@ export function ServicesSection() {
                   {service.description}
                 </p>
                 <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                  Saiba mais <ArrowRight className="w-3.5 h-3.5" />
+                  Saiba mais <ArrowRightIcon className="w-3.5 h-3.5" />
                 </div>
               </Link>
             </motion.div>

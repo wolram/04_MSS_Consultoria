@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Download, Send } from "lucide-react";
+import { ArrowLeftIcon, ArrowDownTrayIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
 
 const invoice = {
   numero: "INV-001",
@@ -24,7 +24,7 @@ export default function FaturaDetailPage() {
   return (
     <div className="space-y-6 max-w-4xl">
       <Link href="/faturas" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-        <ArrowLeft className="w-4 h-4" /> Voltar para Faturas
+        <ArrowLeftIcon className="w-4 h-4" /> Voltar para Faturas
       </Link>
 
       <div className="rounded-2xl border border-border bg-card p-8">
@@ -38,10 +38,10 @@ export default function FaturaDetailPage() {
           </div>
           <div className="flex items-center gap-3">
             <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border text-sm font-medium hover:bg-accent transition-colors">
-              <Download className="w-4 h-4" /> Baixar PDF
+              <ArrowDownTrayIcon className="w-4 h-4" /> Baixar PDF
             </button>
             <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors">
-              <Send className="w-4 h-4" /> Enviar Fatura
+              <PaperAirplaneIcon className="w-4 h-4" /> Enviar Fatura
             </button>
           </div>
         </div>

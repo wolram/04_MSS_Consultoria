@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, TrendingUp, Users, DollarSign } from "lucide-react";
+import { ChartBarIcon, ArrowTrendingUpIcon, UsersIcon, CurrencyDollarIcon } from "@heroicons/react/24/outline";
 import { StatCard } from "@/components/dashboard/stat-card";
 
 const monthlyData = [
@@ -19,10 +19,10 @@ export default function AnaliticosPage() {
     <div className="space-y-8">
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard title="Receita Total" value="R$ 1.2M" icon={DollarSign} trend={{ value: "+15%", direction: "up" }} />
-        <StatCard title="Projetos Concluídos" value="12" icon={BarChart3} trend={{ value: "+3", direction: "up" }} />
-        <StatCard title="Clientes Ativos" value="28" icon={Users} trend={{ value: "+5", direction: "up" }} />
-        <StatCard title="Taxa de Sucesso" value="98%" icon={TrendingUp} trend={{ value: "+2%", direction: "up" }} />
+        <StatCard title="Receita Total" value="R$ 1.2M" icon={CurrencyDollarIcon} trend={{ value: "+15%", direction: "up" }} />
+        <StatCard title="Projetos Concluídos" value="12" icon={ChartBarIcon} trend={{ value: "+3", direction: "up" }} />
+        <StatCard title="Clientes Ativos" value="28" icon={UsersIcon} trend={{ value: "+5", direction: "up" }} />
+        <StatCard title="Taxa de Sucesso" value="98%" icon={ArrowTrendingUpIcon} trend={{ value: "+2%", direction: "up" }} />
       </div>
 
       {/* Chart */}

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Bars3Icon, XMarkIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 import { publicNavItems } from "@/config/navigation";
 import { Logo } from "./logo";
@@ -61,7 +61,7 @@ export function Navbar() {
                 >
                   {item.title}
                   {item.children && (
-                    <ChevronDown className="w-3.5 h-3.5" />
+                    <ChevronDownIcon className="w-3.5 h-3.5" />
                   )}
                 </Link>
 
@@ -101,9 +101,9 @@ export function Navbar() {
             aria-label="Menu"
           >
             {mobileOpen ? (
-              <X className="w-5 h-5" />
+              <XMarkIcon className="w-5 h-5" />
             ) : (
-              <Menu className="w-5 h-5" />
+              <Bars3Icon className="w-5 h-5" />
             )}
           </button>
         </div>

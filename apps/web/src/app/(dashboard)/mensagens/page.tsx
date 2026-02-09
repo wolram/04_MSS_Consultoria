@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send } from "lucide-react";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 
 const conversations = [
@@ -110,7 +110,7 @@ export default function MensagensPage() {
               className="flex-1 px-4 py-2.5 rounded-lg border border-input bg-background text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button className="w-10 h-10 rounded-lg bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors">
-              <Send className="w-4 h-4" />
+              <PaperAirplaneIcon className="w-4 h-4" />
             </button>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const cases = [
   {
@@ -83,7 +83,7 @@ export function CasesSection() {
                   href="/casos"
                   className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Ver caso <ArrowRight className="w-3.5 h-3.5" />
+                  Ver caso <ArrowRightIcon className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </motion.div>
@@ -102,7 +102,7 @@ export function CasesSection() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground font-medium hover:bg-accent transition-colors"
           >
             Ver todos os casos
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRightIcon className="w-4 h-4" />
           </Link>
         </motion.div>
       </div>

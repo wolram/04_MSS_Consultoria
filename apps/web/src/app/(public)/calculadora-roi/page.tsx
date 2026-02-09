@@ -2,19 +2,19 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight, Brain, ShoppingCart, Heart, Truck, Cpu, Factory, GraduationCap, Building, Download, Calendar } from "lucide-react";
+import { ArrowLeftIcon, ArrowRightIcon, CpuChipIcon, ShoppingCartIcon, HeartIcon, TruckIcon, BuildingOfficeIcon, AcademicCapIcon, ArrowDownTrayIcon, CalendarIcon, CubeIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const industries = [
-  { id: "financeiro", label: "Financeiro", icon: Building },
-  { id: "varejo", label: "Varejo", icon: ShoppingCart },
-  { id: "saude", label: "Saude", icon: Heart },
-  { id: "logistica", label: "Logistica", icon: Truck },
-  { id: "tecnologia", label: "Tecnologia", icon: Cpu },
-  { id: "manufatura", label: "Manufatura", icon: Factory },
-  { id: "educacao", label: "Educacao", icon: GraduationCap },
-  { id: "outros", label: "Outros", icon: Brain },
+  { id: "financeiro", label: "Financeiro", icon: BuildingOfficeIcon },
+  { id: "varejo", label: "Varejo", icon: ShoppingCartIcon },
+  { id: "saude", label: "Saude", icon: HeartIcon },
+  { id: "logistica", label: "Logistica", icon: TruckIcon },
+  { id: "tecnologia", label: "Tecnologia", icon: CpuChipIcon },
+  { id: "manufatura", label: "Manufatura", icon: CubeIcon },
+  { id: "educacao", label: "Educacao", icon: AcademicCapIcon },
+  { id: "outros", label: "Outros", icon: CpuChipIcon },
 ];
 
 const painPoints = [
@@ -168,10 +168,10 @@ export default function CalculadoraROIPage() {
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border font-medium hover:bg-accent transition-colors">
-                    <Download className="w-4 h-4" /> Baixar Relatorio
+                    <ArrowDownTrayIcon className="w-4 h-4" /> Baixar Relatorio
                   </button>
                   <Link href="/agendamento" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors">
-                    <Calendar className="w-4 h-4" /> Agendar Consultoria
+                    <CalendarIcon className="w-4 h-4" /> Agendar Consultoria
                   </Link>
                 </div>
               </div>
@@ -183,10 +183,10 @@ export default function CalculadoraROIPage() {
         {step < 3 && (
           <div className="mt-10 flex items-center justify-between">
             <button onClick={() => setStep((s) => Math.max(0, s - 1))} disabled={step === 0} className="inline-flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground disabled:opacity-30 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Anterior
+              <ArrowLeftIcon className="w-4 h-4" /> Anterior
             </button>
             <button onClick={() => setStep((s) => Math.min(3, s + 1))} disabled={!canNext} className="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 disabled:opacity-50 transition-colors">
-              {step === 2 ? "Ver Resultado" : "Proximo"} <ArrowRight className="w-4 h-4" />
+              {step === 2 ? "Ver Resultado" : "Proximo"} <ArrowRightIcon className="w-4 h-4" />
             </button>
           </div>
         )}

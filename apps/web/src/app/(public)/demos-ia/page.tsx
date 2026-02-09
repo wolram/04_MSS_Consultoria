@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Send, Bot, User, Play, ArrowRight } from "lucide-react";
+import { PaperAirplaneIcon, CpuChipIcon, UserIcon, PlayIcon, ArrowRightIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
 
 // ---- Chatbot Demo ----
@@ -42,23 +42,23 @@ function ChatbotDemo() {
   return (
     <div className="rounded-2xl border border-border bg-card overflow-hidden max-w-lg mx-auto">
       <div className="p-4 border-b border-border bg-primary/5 flex items-center gap-2">
-        <Bot className="w-5 h-5 text-primary" />
+        <CpuChipIcon className="w-5 h-5 text-primary" />
         <span className="font-medium text-foreground text-sm">Assistente MSS</span>
         <span className="ml-auto w-2 h-2 rounded-full bg-green-500" />
       </div>
       <div className="h-80 overflow-y-auto p-4 space-y-3">
         {messages.map((msg, i) => (
           <div key={i} className={cn("flex gap-2", msg.role === "user" ? "justify-end" : "justify-start")}>
-            {msg.role === "bot" && <Bot className="w-6 h-6 text-primary flex-shrink-0 mt-1" />}
+            {msg.role === "bot" && <CpuChipIcon className="w-6 h-6 text-primary flex-shrink-0 mt-1" />}
             <div className={cn("max-w-[75%] px-3 py-2 rounded-xl text-sm", msg.role === "user" ? "bg-primary text-primary-foreground" : "bg-accent text-foreground")}>
               {msg.text}
             </div>
-            {msg.role === "user" && <User className="w-6 h-6 text-muted-foreground flex-shrink-0 mt-1" />}
+            {msg.role === "user" && <UserIcon className="w-6 h-6 text-muted-foreground flex-shrink-0 mt-1" />}
           </div>
         ))}
         {typing && (
           <div className="flex gap-2">
-            <Bot className="w-6 h-6 text-primary flex-shrink-0" />
+            <CpuChipIcon className="w-6 h-6 text-primary flex-shrink-0" />
             <div className="px-3 py-2 rounded-xl bg-accent text-foreground text-sm">
               <span className="inline-flex gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground animate-bounce" />
@@ -79,7 +79,7 @@ function ChatbotDemo() {
           className="flex-1 px-3 py-2 rounded-lg border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         />
         <button onClick={handleSend} className="w-9 h-9 rounded-lg bg-primary text-primary-foreground flex items-center justify-center hover:bg-primary/90 transition-colors">
-          <Send className="w-4 h-4" />
+          <PaperAirplaneIcon className="w-4 h-4" />
         </button>
       </div>
     </div>
@@ -122,7 +122,7 @@ function WorkflowBuilder() {
               {node}
             </div>
             {i < workflows[active].nodes.length - 1 && (
-              <ArrowRight className={cn("w-4 h-4 transition-colors duration-500", animatedNode > i ? "text-primary" : "text-muted-foreground/30")} />
+              <ArrowRightIcon className={cn("w-4 h-4 transition-colors duration-500", animatedNode > i ? "text-primary" : "text-muted-foreground/30")} />
             )}
           </div>
         ))}

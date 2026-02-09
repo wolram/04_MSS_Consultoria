@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Search, Bell } from "lucide-react";
+import { MagnifyingGlassIcon, BellIcon } from "@heroicons/react/24/outline";
 
 const pathLabels: Record<string, string> = {
   "/painel": "Painel de Controle",
@@ -33,7 +33,7 @@ export function TopBar() {
       </div>
       <div className="flex items-center gap-3">
         <div className="relative hidden sm:block">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+          <MagnifyingGlassIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
           <input
             type="text"
             placeholder="Buscar..."
@@ -41,7 +41,7 @@ export function TopBar() {
           />
         </div>
         <button className="relative w-9 h-9 rounded-lg hover:bg-accent flex items-center justify-center transition-colors">
-          <Bell className="w-5 h-5 text-muted-foreground" />
+          <BellIcon className="w-5 h-5 text-muted-foreground" />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary" />
         </button>
       </div>
