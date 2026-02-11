@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { PlusIcon } from "@heroicons/react/24/outline";
 import { cn } from "@/lib/utils";
@@ -40,13 +40,15 @@ export default function ProjetosPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("all");
 
-  const filtered = projects.filter((p) => {
-    if (activeTab === "active") return p.status !== "COMPLETED";
-    if (activeTab === "completed") return p.status === "COMPLETED";
-    return true;
-  });
+  const filtered = useMemo(() => {
+    return projects.filter((p) => {
+      if (activeTab === "active") return p.status !== "COMPLETED";
+      if (activeTab === "completed") return p.status === "COMPLETED";
+      return true;
+    });
+  }, [activeTab]);
 
-  const columns = [
+  const columns = useMemo(() => [
     { key: "nome", label: "Nome" },
     {
       key: "status",
@@ -71,7 +73,7 @@ export default function ProjetosPage() {
     },
     { key: "prazo", label: "Prazo" },
     { key: "orcamento", label: "Orçamento" },
-  ];
+  ], []);
 
   return (
     <div className="space-y-6">

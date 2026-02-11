@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { DataTable } from "@/components/dashboard/data-table";
@@ -38,14 +38,16 @@ export default function FaturasPage() {
   const router = useRouter();
   const [activeTab, setActiveTab] = useState("all");
 
-  const filtered = invoices.filter((inv) => {
-    if (activeTab === "pending") return inv.status === "SENT" || inv.status === "DRAFT";
-    if (activeTab === "paid") return inv.status === "PAID";
-    if (activeTab === "overdue") return inv.status === "OVERDUE";
-    return true;
-  });
+  const filtered = useMemo(() => {
+    return invoices.filter((inv) => {
+      if (activeTab === "pending") return inv.status === "SENT" || inv.status === "DRAFT";
+      if (activeTab === "paid") return inv.status === "PAID";
+      if (activeTab === "overdue") return inv.status === "OVERDUE";
+      return true;
+    });
+  }, [activeTab]);
 
-  const columns = [
+  const columns = useMemo(() => [
     { key: "numero", label: "Número" },
     { key: "cliente", label: "Cliente" },
     { key: "valor", label: "Valor" },
@@ -60,7 +62,7 @@ export default function FaturasPage() {
     },
     { key: "emissao", label: "Emissão" },
     { key: "vencimento", label: "Vencimento" },
-  ];
+  ], []);
 
   return (
     <div className="space-y-6">
