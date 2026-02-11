@@ -146,6 +146,7 @@ model Project {
   invoices     Invoice[]
 
   @@index([organizationId])
+  @@index([status])
 }
 
 model Milestone {
@@ -287,6 +288,7 @@ model Invoice {
 
   @@index([organizationId])
   @@index([projectId])
+  @@index([status])
 }
 
 model InvoiceItem {
@@ -372,6 +374,9 @@ model ContactSubmission {
   message   String
   status    String   @default("NEW")
   createdAt DateTime @default(now())
+
+  @@index([status])
+  @@index([createdAt])
 }
 
 model Booking {
@@ -387,6 +392,9 @@ model Booking {
   notes     String?
   status    String   @default("PENDING")
   createdAt DateTime @default(now())
+
+  @@index([status])
+  @@index([date])
 }
 
 // ============================================================================

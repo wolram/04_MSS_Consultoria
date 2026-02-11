@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRightIcon, CalculatorIcon } from "@heroicons/react/24/outline";
 
@@ -17,11 +18,13 @@ export function Hero() {
       {/* Background image with overlay */}
       <div className="absolute inset-0 -z-10">
         {/* High-res background image - Earth from space with tech overlay */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')`,
-          }}
+        <Image
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072"
+          alt="Earth from space with tech overlay"
+          fill
+          priority
+          className="object-cover object-center"
+          sizes="100vw"
         />
         {/* Dark overlay for better contrast and readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/90 to-background" />
